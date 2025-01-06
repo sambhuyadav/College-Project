@@ -9,12 +9,30 @@ const App = () => {
   const [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(false);
 
-  const fetchNews = async (selectedCategory) => {
-    const API_KEY = "3bbae3ae5dae47ab853e598b93172d1f" ; 
+  // const fetchNews = async (selectedCategory) => {
+  //   const API_KEY = "3bbae3ae5dae47ab853e598b93172d1f" ; 
  
-    console.log(API_KEY);
-    const URL = `https://newsapi.org/v2/top-headlines?country=us&category=${selectedCategory}&apiKey=${API_KEY}`;
+  //   console.log(API_KEY);
+  //   const URL = `https://newsapi.org/v2/top-headlines?country=us&category=${selectedCategory}&apiKey=${API_KEY}`;
 
+  //   try {
+  //     setLoading(true);
+  //     const response = await axios.get(URL);
+  //     setArticles(response.data.articles);
+  //     setLoading(false);
+  //   } catch (err) {
+  //     console.error("Failed to fetch news:", err);
+  //     setLoading(false);
+  //   }
+  // };
+
+
+
+
+
+  const fetchNews = async (selectedCategory) => {
+    const URL = `/v2/top-headlines?country=us&category=${selectedCategory}&apiKey=3bbae3ae5dae47ab853e598b93172d1f`;
+  
     try {
       setLoading(true);
       const response = await axios.get(URL);

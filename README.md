@@ -15,7 +15,7 @@ A **React.js** application that provides personalized news updates by fetching t
 
 ## 🚀 Demo
 
-[**Live Demo**](#) *(Add link to your deployed project here)*
+[**Live Demo**](https://college-project-black-rho.vercel.app/)
 
 ---
 
